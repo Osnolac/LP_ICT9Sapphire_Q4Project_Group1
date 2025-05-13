@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Us</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"; rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #navbar {
+            background-color: rgb(12, 12, 131);
+            padding-inline: 5px;
+        }
+        .navbarlist {
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            border-top:1px solid grey;
+            padding: 5px;
+            background-color: darkblue;
+            color: white;
+            margin: 0px
+        }
+        .nav-link {
+            color: white
+        }
+        #bigbox {
+            border: 2px solid grey;
+            border-radius: 5px;
+            width: 1000px;
+            padding: 20px;
+            
+            
+        }
+    </style>
+
+</head>
+<body>
+
+   
+    <nav class="navbar navbar-expand" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="mainpage.html">
+                <img src="data:image/png;base64,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" alt="obmc" width="50px" height="50px">
+            </a>
+                <div class="colapse navbar-collapse justify-content-center+">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item px-1 navbarlist"><a class="nav-link" href="mainpage(Nathan).html" target="_self">About Us</a></li>
+                        <li class="nav-item px-1 navbarlist"><a class="nav-link" href="https://github.com/oyoyoyAbaca/CAMPUS_ICT9SAPPHIRE_Q1Project_Abaca_Nathan" target="_blank">First Quarter</a></li>
+                        <li class="nav-item px-1 navbarlist"><a class="nav-link" href="https://github.com/oyoyoyAbaca/projec" target="_blank">Second Quarter</a></li>
+                        <li class="nav-item px-1 navbarlist"><a class="nav-link" href="https://footballchild.github.io/LasPinas_ICT9Sapphire_Q3Project_Battung_Lorenzo/" target="_blank">Third Quarter</a></li>
+                        <li class="nav-item px-1 navbarlist"><a class="nav-link" href="#" target="_blank">Fourth Quarter Quiz 1</a></li>
+                        <li class="nav-item px-1 navbarlist"><a class="nav-link" href="https://github.com/oyoyoyAbaca/LasPinas_ICT9Sapphire_Q4Quiz2_Abaca_Nathan" target="_blank">Fourth Quarter Quiz 2</a></li>
+                        <li class="nav-item px-1 navbarlist"><a class="nav-link" href="page6(Nathan).html" target="_self" >What's Next</a></li>
+                        <li class="nav-item px-1 navbarlist"><a class="nav-link" href="page7(Nathan).html" target="_self">Rate Us</a></li>
+                    </ul>
+
+                    <form class="d-flex">
+                        <a  href="index.html"><button class="btn btn-primary" class="btn" type="button">Log Out</button></a>
+                    </form>
+                </div>
+        </div>
+
+        
+    </nav>
+<br>
+    
+
+<div class="container" style="text-align: center; width: 600px">
+        <h1 style="font-family: 'Courier New', Courier, monospace;background-color: black;color: white;" class="p-1">RATE US</h1>
+    </div>
+    <br>
+    <div class="container" style="text-align: center;">
+        <h4>Please rate the quality of our Fourth Quarter Final Project and feel free to give comments!</h3>
+        </div>
+<br>
+    <div class="container" id="bigbox">
+
+    <h4><center><strong>Rate us</strong></center></h4>
+    <label for="eoi"><strong>Execution of Instructions: </strong></label>
+    <select class="form-control" id="eoi">
+        <option value=none>N/A</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select>
+    <br>
+    <label for="sac"><strong>Syntax and Content: </strong></label>
+    <select class="form-control" id="sac">
+        <option value=none>N/A</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select>
+    <br>
+    <label for="gof"><strong>General Output/Functionality: </strong></label>
+    <select class="form-control" id="gof">
+        <option value=none>N/A</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select>
+    <br>
+    <label for="txtbx"><strong>Any Other Comments(Optiional): </strong></label>
+    <textarea class="form-control" style="height: 180px;" placeholder="Type Here..."></textarea>
+    <br>
+    <button class="btn btn-primary" style="width:955px;align-self:center" type="button" onclick="avg()">Submit</button>
+
+    <script>
+        function avg() {
+            var x = document.getElementById('eoi').value;
+            var y = document.getElementById('sac').value;
+            var z = document.getElementById('gof').value;
+
+            var avg = (Number(x) + Number(y) +Number(z))/3
+
+            if ((x>=1)&&(y>=1)&&(z>=1)) {
+                alert("Thanks for your feedback, we got an average rating of " + avg)
+            }
+            else {
+                alert("Please complete the feedback form")
+            }
+
+        }
+    </script>
+    </div>
+</body>
+</html>
